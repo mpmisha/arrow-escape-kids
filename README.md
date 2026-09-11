@@ -4,6 +4,12 @@ Arrow Escape is a calm, touch-first directional puzzle for the Playground hub. C
 
 Levels are deterministic from their level number and seed. They are generated from a valid removal order and checked before play, so every board is solvable. Tiny rectangular onboarding boards introduce the rules before shapes grow into arrows, diamonds, hexagons, zigzags, and friendly fish, cat, and butterfly silhouettes.
 
+## Screenshots
+
+| Easy onboarding board | Butterfly silhouette board | Settings and accessibility controls |
+| --- | --- | --- |
+| ![Easy onboarding board with four directional arrow pieces](docs/screenshots/onboarding-board.png) | ![Butterfly silhouette board made from colorful arrow pieces](docs/screenshots/butterfly-silhouette-board.png) | ![Settings panel with sound, vibration, reset, close, and back controls](docs/screenshots/settings-panel.png) |
+
 ## Local preview
 
 ```bash
