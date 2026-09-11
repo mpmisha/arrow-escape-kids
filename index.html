@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#20264f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Arrow Escape">
+  <title>Arrow Escape</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main id="app">
+    <header id="hud" aria-label="Game status">
+      <div class="best-badge"><span aria-hidden="true">👑</span><span id="level-label">1</span></div>
+      <div class="score" id="score" aria-live="polite">0 / 0</div>
+      <button class="gear" id="settings-button" aria-label="Settings">⚙︎</button>
+    </header>
+    <section id="board-wrap">
+      <canvas id="board" aria-label="Arrow puzzle board" tabindex="0"></canvas>
+      <div id="hint" class="hint" aria-live="polite"></div>
+    </section>
+    <nav class="actions" aria-label="Game controls">
+      <button class="btn secondary small" id="undo-button">↶ <span data-i18n="undo">Undo</span></button>
+      <button class="btn secondary small" id="reset-button">↻ <span data-i18n="reset">Reset</span></button>
+      <button class="btn primary small" id="hint-button">💡 <span data-i18n="hint">Hint</span></button>
+    </nav>
+  </main>
+
+  <div class="overlay" id="settings-overlay" hidden>
+    <div class="scrim" data-close="settings"></div>
+    <section class="panel" role="dialog" aria-modal="true" aria-labelledby="settings-title">
+      <h2 id="settings-title" data-i18n="settings">Settings</h2>
+      <div class="row"><span class="row-label" data-i18n="sound">Sound</span><button class="toggle" id="sound-toggle" aria-label="Sound"><span class="knob"></span></button></div>
+      <div class="row"><span class="row-label" data-i18n="vibration">Vibration</span><button class="toggle" id="haptics-toggle" aria-label="Vibration"><span class="knob"></span></button></div>
+      <button class="btn danger" id="reset-best" data-i18n="resetBest">Reset Best</button>
+      <button class="btn secondary" id="close-settings" data-i18n="close">Close</button>
+      <button class="btn secondary" id="back-games" hidden data-i18n="back">← Back to Games</button>
+    </section>
+  </div>
+
+  <div class="overlay" id="win-overlay" hidden>
+    <div class="scrim"></div>
+    <section class="panel gameover" role="dialog" aria-modal="true" aria-labelledby="win-title">
+      <div class="go-emoji">🌟</div>
+      <h2 id="win-title" data-i18n="great">Great escape!</h2>
+      <p id="win-copy"></p>
+      <button class="btn primary" id="next-button" data-i18n="next">Next Level</button>
+      <button class="btn secondary" id="replay-button" data-i18n="replay">Play Again</button>
+    </section>
+  </div>
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
