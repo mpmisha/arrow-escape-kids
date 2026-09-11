@@ -2,7 +2,7 @@
 
 Arrow Escape is a calm, touch-first directional puzzle for the Playground hub. Choose an arrow whose whole forward lane is clear, and it gently slips away. Keep going until the board is empty.
 
-Levels are deterministic from their level number and seed. They are generated from a valid removal order and checked before play, so every board is solvable. Shapes grow from simple arrows into diamonds, hexagons, zigzags, and friendly fish, cat, and butterfly silhouettes.
+Levels are deterministic from their level number and seed. They are generated from a valid removal order and checked before play, so every board is solvable. Tiny rectangular onboarding boards introduce the rules before shapes grow into arrows, diamonds, hexagons, zigzags, and friendly fish, cat, and butterfly silhouettes.
 
 ## Local preview
 
