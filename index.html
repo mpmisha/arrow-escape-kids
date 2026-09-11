@@ -17,16 +17,16 @@
 </head>
 <body>
   <main id="app">
-    <header id="hud" aria-label="Game status">
+    <header id="hud" aria-label="Game status" data-i18n-aria="status">
       <div class="best-badge"><span aria-hidden="true">👑</span><span id="level-label">1</span></div>
       <div class="score" id="score" aria-live="polite">0 / 0</div>
-      <button class="gear" id="settings-button" aria-label="Settings">⚙︎</button>
+      <button class="gear" id="settings-button" aria-label="Settings" data-i18n-aria="settings">⚙︎</button>
     </header>
     <section id="board-wrap">
-      <canvas id="board" aria-label="Arrow puzzle board" tabindex="0"></canvas>
+      <canvas id="board" aria-label="Arrow puzzle board" data-i18n-aria="board" tabindex="0"></canvas>
       <div id="hint" class="hint" aria-live="polite"></div>
     </section>
-    <nav class="actions" aria-label="Game controls">
+    <nav class="actions" aria-label="Game controls" data-i18n-aria="controls">
       <button class="btn secondary small" id="undo-button">↶ <span data-i18n="undo">Undo</span></button>
       <button class="btn secondary small" id="reset-button">↻ <span data-i18n="reset">Reset</span></button>
       <button class="btn primary small" id="hint-button">💡 <span data-i18n="hint">Hint</span></button>
@@ -37,8 +37,8 @@
     <div class="scrim" data-close="settings"></div>
     <section class="panel" role="dialog" aria-modal="true" aria-labelledby="settings-title">
       <h2 id="settings-title" data-i18n="settings">Settings</h2>
-      <div class="row"><span class="row-label" data-i18n="sound">Sound</span><button class="toggle" id="sound-toggle" aria-label="Sound"><span class="knob"></span></button></div>
-      <div class="row"><span class="row-label" data-i18n="vibration">Vibration</span><button class="toggle" id="haptics-toggle" aria-label="Vibration"><span class="knob"></span></button></div>
+      <div class="row"><span class="row-label" data-i18n="sound">Sound</span><button class="toggle" id="sound-toggle" aria-label="Sound" data-i18n-aria="sound"><span class="knob"></span></button></div>
+      <div class="row"><span class="row-label" data-i18n="vibration">Vibration</span><button class="toggle" id="haptics-toggle" aria-label="Vibration" data-i18n-aria="vibration"><span class="knob"></span></button></div>
       <button class="btn danger" id="reset-best" data-i18n="resetBest">Reset Best</button>
       <button class="btn secondary" id="close-settings" data-i18n="close">Close</button>
       <button class="btn secondary" id="back-games" hidden data-i18n="back">← Back to Games</button>

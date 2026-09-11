@@ -13,7 +13,7 @@ export function generateLevel(level=1,seed=level){
   for(let id=count-1;id>=0;id--){
     let placed=null;
     for(let attempt=0;attempt<400&&!placed;attempt++){
-      const shape=shapeFor(id+level),dir=DIRS[Math.floor(random()*4)];
+      const shape=level<3?"arrow":shapeFor(id+level),dir=DIRS[Math.floor(random()*4)];
       const cells=cellsFor(shape,Math.floor(random()*w),Math.floor(random()*h),Math.floor(random()*4));
       if(cells.some(([x,y])=>x<0||y<0||x>=w||y>=h))continue;
       if(cells.some(([x,y])=>occupied.has(`${x},${y}`)))continue;
